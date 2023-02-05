@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TasksList.vue Snapshot test 1`] = `
+<v-container>
+  <v-tabs>
+    <v-tab>All tasks</v-tab>
+    <v-tab>Done tasks</v-tab>
+    <v-tab>Undone Tasks</v-tab>
+  </v-tabs>
+  <div class="warning-text">
+    <!---->
+    <!---->
+    <!---->
+  </div>
+  <v-expansion-panels focusable="">
+    <v-expansion-panel>
+      <v-expansion-panel-header></v-expansion-panel-header>
+      <v-expansion-panel-content>
+        <div class="panel-icons">
+          <v-icon>schedule</v-icon> = hours
+        </div>
+        <div class="panel-icons">
+          <v-icon>comment</v-icon> =
+        </div>
+        <div class="panel-icons">
+          <v-icon>calendar_month</v-icon> =
+        </div>
+        <div class="panel-buttons">
+          <div>
+            <v-btn color="error" class="ma-2">
+              Undone Task
+            </v-btn>
+          </div>
+          <div>
+            <v-btn fab="" dark="" small="" color="cyan" class="mx-2">
+              <v-icon dark="">
+                mdi-pencil
+              </v-icon>
+            </v-btn>
+            <v-btn fab="" dark="" small="" color="red" class="mx-2">
+              <v-icon dark="">
+                delete
+              </v-icon>
+            </v-btn>
+          </div>
+        </div>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header></v-expansion-panel-header>
+      <v-expansion-panel-content>
+        <div class="panel-icons">
+          <v-icon>schedule</v-icon> = hours
+        </div>
+        <div class="panel-icons">
+          <v-icon>comment</v-icon> =
+        </div>
+        <div class="panel-icons">
+          <v-icon>calendar_month</v-icon> =
+        </div>
+        <div class="panel-buttons">
+          <div>
+            <v-btn color="error" class="ma-2">
+              Undone Task
+            </v-btn>
+          </div>
+          <div>
+            <v-btn fab="" dark="" small="" color="cyan" class="mx-2">
+              <v-icon dark="">
+                mdi-pencil
+              </v-icon>
+            </v-btn>
+            <v-btn fab="" dark="" small="" color="red" class="mx-2">
+              <v-icon dark="">
+                delete
+              </v-icon>
+            </v-btn>
+          </div>
+        </div>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header></v-expansion-panel-header>
+      <v-expansion-panel-content>
+        <div class="panel-icons">
+          <v-icon>schedule</v-icon> = hours
+        </div>
+        <div class="panel-icons">
+          <v-icon>comment</v-icon> =
+        </div>
+        <div class="panel-icons">
+          <v-icon>calendar_month</v-icon> =
+        </div>
+        <div class="panel-buttons">
+          <div>
+            <v-btn color="error" class="ma-2">
+              Undone Task
+            </v-btn>
+          </div>
+          <div>
+            <v-btn fab="" dark="" small="" color="cyan" class="mx-2">
+              <v-icon dark="">
+                mdi-pencil
+              </v-icon>
+            </v-btn>
+            <v-btn fab="" dark="" small="" color="red" class="mx-2">
+              <v-icon dark="">
+                delete
+              </v-icon>
+            </v-btn>
+          </div>
+        </div>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels>
+  <div class="button-delete-done">
+    <!---->
+  </div>
+</v-container>
+`;

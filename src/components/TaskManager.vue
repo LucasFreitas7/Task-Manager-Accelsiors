@@ -26,13 +26,10 @@ import AlertBar from '@/components/AlertBar.vue'
     methods:{
       fetchEditTask(value){
         this.isToEdit = true
-        console.log('ITS to edit = ', this.isToEdit)
         this.editId = value
       },
       changeEdit(){
-        console.log('Chegou aqui')
         this.isToEdit = false
-        console.log('ITS to edit = ', this.isToEdit)
       }
     }
   }

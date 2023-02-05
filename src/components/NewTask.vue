@@ -1,12 +1,12 @@
 <template>
     <v-container>
       <template>
-        <div>
-            <v-text-field
-                label="Activty *"
-                hide-details="auto"
-                v-model="task.activty"
-            ></v-text-field>
+        <div class="new-task">
+            <v-select
+              :items="items"
+              label="Activity"
+              v-model="task.activty"
+            ></v-select>
             <v-text-field
                 label="Message"
                 hide-details="auto"
@@ -15,7 +15,11 @@
             <v-text-field
             label="Duration *"
             hide-details="auto"
+            type="number"
             v-model.number="task.duration"
+            step="0.5"
+            min="0.5"
+            max="12"
             ></v-text-field>
             <div class="input-date">
               <v-col
@@ -90,10 +94,12 @@
         AlertTask
       },
       data: () => ({
+        items: ['Cook', 'Videogame', 'Workout', 'Study', 'Walk'],
         date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
         menu: false,
         loading: false,
         warning: '',
+        contId: 0,
         warningSucess: '',
         task: {},
       }),
@@ -101,10 +107,11 @@
         ...mapGetters(['getAll'])
       },
       methods:{
-        ...mapActions(['toggleChange', 'addTask']),
+        ...mapActions(['addTask']),
         newTask(){
           this.warning = ''
-          this.task.id = this.getAll.length + 1
+          this.task.id = this.contId + 1
+          this.contId++
           this.task.done = false
           this.task.date = this.date
           var exist = false
@@ -141,7 +148,7 @@
             return
           }
           else if(this.task.duration < 0.5 || this.task.duration > 12){
-            this.warning = 'Number needs to be in a range 0.5 to 12'
+            this.warning = 'Duration needs to be in a range 0.5 to 12'
             setTimeout(() => {
               this.warning = ''
             }, "3000")
@@ -151,12 +158,14 @@
           this.task = {}
           this.warningSucess = 'Task created with success'
           setTimeout(() => {
-            console.log('Atualizou')
             this.warningSucess = ''
-          }, "5000")
+          }, "2000")
           return
         }
   
+      },
+      created(){
+        this.contId= this.getAll.length
       }
     }
   </script>
@@ -164,6 +173,16 @@
   <style>
   .col-md-4{
     padding: 0 !important;
+  }
+
+  .new-task{
+    width: 40%;
+  }
+
+  @media (max-width: 600px) {
+    .new-task{
+      width: 90%;
+    }
   }
   </style>
   

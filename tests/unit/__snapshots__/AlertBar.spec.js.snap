@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alertbar.vue Snapshot test 1`] = `
+<v-row justify="center">
+  <v-dialog persistent="" max-width="290" color="white">
+    <edittask-stub taskid="1"></edittask-stub>
+  </v-dialog>
+</v-row>
+`;

@@ -1,8 +1,9 @@
 <template>
   <v-app>
     <v-app-bar
+      class=""
       app
-      color="primary"
+      color="#99D9EA"
       dark
     >
       <div class="d-flex align-center">
@@ -16,7 +17,11 @@
         />
       </div>
 
+
       <v-spacer></v-spacer>
+
+      <v-icon medium color="black">edit_calendar</v-icon>
+      <h3>Task Manager</h3>
     </v-app-bar>
 
     <v-main>
@@ -40,3 +45,14 @@ export default {
   }),
 };
 </script>
+
+<style>
+
+.theme--dark.v-sheet{
+  color: black;
+}
+h3{
+  margin-left: 8px;
+}
+
+</style>

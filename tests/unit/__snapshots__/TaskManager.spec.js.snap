@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskManager.vue Snapshot test 1`] = `
+<v-container>
+  <newtask-stub></newtask-stub>
+  <tasklist-stub></tasklist-stub>
+  <alertbar-stub></alertbar-stub>
+</v-container>
+`;

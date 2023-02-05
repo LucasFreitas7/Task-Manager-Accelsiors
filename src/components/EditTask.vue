@@ -2,11 +2,11 @@
     <v-container>
       <template>
         <div>
-            <v-text-field
-                label="Activty *"
-                hide-details="auto"
-                v-model="getAll[taskId].activty"
-            ></v-text-field>
+            <v-select
+            :items="items"
+            label="Activity"
+            v-model="getAll[taskId].activty"
+          ></v-select>
             <v-text-field
                 label="Message"
                 hide-details="auto"
@@ -15,7 +15,11 @@
             <v-text-field
             label="Duration *"
             hide-details="auto"
+            type="number"
             v-model.number="getAll[taskId].duration"
+            step="0.5"
+            min="0.5"
+            max="12"
             ></v-text-field>
             <div class="input-date">
                 <v-col
@@ -96,6 +100,7 @@
         }
       },
       data: () => ({
+        items: ['Cook', 'Videogame', 'Workout', 'Study', 'Walk'],
         date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
         warning:'',
         warningSucess:'',
@@ -151,14 +156,12 @@
             }, "3000")
             return
           }
-          console.log(this.task)
           this.editTask(this.task)
           this.warningSucess = 'Task updated with success'
           setTimeout(() => {
-            console.log('Atualizou')
             this.warningSucess = ''
             this.$emit('close-dialog')
-          }, "3000")
+          }, "1000")
           return
         }
   

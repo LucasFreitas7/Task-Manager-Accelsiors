@@ -11,31 +11,31 @@ export default new Vuex.Store({
         comment: 'Fishing with friends',
         date: '2023-02-04',
         done: false,
-        duration: 1
+        duration: 2
       },
       {
         id:2,
-        activty: 'Soccer',
-        date: '2023-06-04',
-        comment: 'Play soccer with my son',
+        activty: 'Workout',
+        date: '2023-02-04',
+        comment: 'Workout on BrossGym',
         done: true,
         duration: 5
       },
       {
         id:3,
         activty: 'Videogame',
-        date: '2023-06-04',
-        comment: 'Play videogame after the job',
+        date: '2023-02-04',
+        comment: '',
         done: true,
-        duration: 2
+        duration: 3
       },
       {
         id:4,
         activty: 'Cook',
-        date: '2023-06-04',
+        date: '2023-02-04',
         comment: 'Cook for my wife',
         done: true,
-        duration: 2
+        duration: 4
       },
     ],
   },
@@ -72,8 +72,7 @@ export default new Vuex.Store({
 
     [TOGGLE_CHECK](state, payload){
       let index = state.all.findIndex(e => e.id == payload.id);
-      console.log(JSON.stringify(payload))
-      Vue.set(state.all, index, {...state.all[index], done: payload.done});
+      Vue.set(state.all, index, {...state.all[index], done: !payload.done});
     },
 
     [CLEAR_DONE](state){
@@ -92,7 +91,6 @@ export default new Vuex.Store({
       commit('DELETE_TODO', task)
     },
     editTask({commit}, task){
-      console.log('Chamou aqui')
       commit('EDIT_TASK', task)
     },
     clearDone({commit}){

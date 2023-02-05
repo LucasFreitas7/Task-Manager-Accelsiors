@@ -20,19 +20,30 @@
             <div class="panel-icons">
               <v-icon>schedule</v-icon> = {{ task.duration }} hours
             </div>
-            <div class="panel-icons">
+            <div v-if="task.comment != ''" class="panel-icons">
               <v-icon>comment</v-icon> = {{ task.comment }}
             </div>
             <div class="panel-icons">
-              <v-icon>calendar_month</v-icon> = {{ task.date.replaceAll( '-' , '/') }}
+              <v-icon>calendar_month</v-icon> = {{ task.date }}
             </div>
             <div class="panel-buttons">
               <div>
-                <v-checkbox
-                  v-model="task.done"
-                  @click="toggleChange(task)"
-                  label="Task done"
-                ></v-checkbox>
+                <v-btn
+                    v-if="task.done === false"
+                    class="ma-2"
+                    color="success"
+                    @click="toogleFetch(task)"
+                >
+                  Done Task
+                </v-btn>
+                <v-btn
+                    v-else
+                    class="ma-2"
+                    color="error"
+                    @click="toogleFetch(task)"
+                  >
+                  Undone Task
+                </v-btn>
               </div>
               <div v-if="activeClass === 'all'">
                 <v-btn
@@ -94,13 +105,12 @@
       watch:{
         getAll(newValue){
         this.allFiltered = newValue
-      },
+        },
         doneAll(newValue, oldValue){
           if(newValue.length < oldValue.length && this.activeClass === 'completed'){
             this.allFiltered = newValue
           }
         },
-  
         undoneAll(newValue, oldValue){
           if(newValue.length < oldValue.length && this.activeClass === 'active'){
             this.allFiltered = newValue
@@ -126,8 +136,11 @@
         }
       },
       emitTaskEdit(id){
-            console.log(id)
             this.$emit('edit', id)
+
+        },
+        toogleFetch(task){
+          this.toggleChange(task)
         }
       },
       created(){
@@ -194,6 +207,14 @@
 
   .button-delete-done{
     margin-top: 10px;
+  }
+  .v-slide-group__prev{
+    display: none;
+    margin-left: -40px;
+  }
+  .v-tab{
+    font-size: 0.7rem !important;
+    max-width: 150px !important
   }
   </style>
   

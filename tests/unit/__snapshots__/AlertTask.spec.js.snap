@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertTask.vue Snapshot test 1`] = `
+<div>
+  <v-alert dense="" outlined="" type="error">
+
+  </v-alert>
+</div>
+`;

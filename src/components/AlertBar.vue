@@ -42,9 +42,6 @@
             this.$emit('need-close')
         }
     },
-    created(){
-      console.log('Dialog on Alertbar =',  this.dialog)
-    }
     }
   </script>
 <style>
