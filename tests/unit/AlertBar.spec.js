@@ -1,14 +1,14 @@
 import { shallowMount } from '@vue/test-utils'
-import Alertbar from '@/components/Alertbar.vue'
+import AlertBar from '@/components/AlertBar.vue'
 import EditTask from '@/components/EditTask.vue'
-describe('Alertbar.vue', () => {
+describe('AlertBar.vue', () => {
 
   it('Snapshot test', () => {
-    const wrapper = shallowMount(Alertbar)
+    const wrapper = shallowMount(AlertBar)
     expect(wrapper.html()).toMatchSnapshot()
   })
   it('when pass props Id, she must be passed to the componnent editTask', () => {
-    const wrapper = shallowMount(Alertbar, {
+    const wrapper = shallowMount(AlertBar, {
       propsData: { id: 1 }
     })
     const edit = wrapper.findComponent(EditTask) // => finds Bar by component instance
