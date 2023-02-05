@@ -18,7 +18,7 @@
           <v-expansion-panel-header>{{ task.activty}}</v-expansion-panel-header>
           <v-expansion-panel-content>
             <div class="panel-icons">
-              <v-icon>schedule</v-icon> = {{ task.duration }} hours
+              <v-icon>schedule</v-icon> = {{durationFormat(task.duration) }}
             </div>
             <div v-if="task.comment != ''" class="panel-icons">
               <v-icon>comment</v-icon> = {{ task.comment }}
@@ -141,7 +141,18 @@
         },
         toogleFetch(task){
           this.toggleChange(task)
-        }
+        },
+        durationFormat(duration){
+          if(duration == 1){
+            return '1 hour'
+          }
+          else if(duration == 0.5){
+            return '30 minutes'
+          }
+          else{
+            return duration + 'hours'
+          }
+        },
       },
       created(){
         this.allFiltered = this.getAll

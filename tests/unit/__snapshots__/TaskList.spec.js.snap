@@ -17,7 +17,7 @@ exports[`TasksList.vue Snapshot test 1`] = `
       <v-expansion-panel-header></v-expansion-panel-header>
       <v-expansion-panel-content>
         <div class="panel-icons">
-          <v-icon>schedule</v-icon> = hours
+          <v-icon>schedule</v-icon> = undefinedhours
         </div>
         <div class="panel-icons">
           <v-icon>comment</v-icon> =
@@ -50,7 +50,7 @@ exports[`TasksList.vue Snapshot test 1`] = `
       <v-expansion-panel-header></v-expansion-panel-header>
       <v-expansion-panel-content>
         <div class="panel-icons">
-          <v-icon>schedule</v-icon> = hours
+          <v-icon>schedule</v-icon> = undefinedhours
         </div>
         <div class="panel-icons">
           <v-icon>comment</v-icon> =
@@ -83,7 +83,7 @@ exports[`TasksList.vue Snapshot test 1`] = `
       <v-expansion-panel-header></v-expansion-panel-header>
       <v-expansion-panel-content>
         <div class="panel-icons">
-          <v-icon>schedule</v-icon> = hours
+          <v-icon>schedule</v-icon> = undefinedhours
         </div>
         <div class="panel-icons">
           <v-icon>comment</v-icon> =

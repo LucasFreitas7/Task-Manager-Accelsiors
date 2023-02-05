@@ -161,7 +161,7 @@
           setTimeout(() => {
             this.warningSucess = ''
             this.$emit('close-dialog')
-          }, "1000")
+          }, "3000")
           return
         }
   
