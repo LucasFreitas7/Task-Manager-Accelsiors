@@ -8,7 +8,7 @@ exports[`EditTask.vue Snapshot test 1`] = `
     <v-text-field label="Duration *" hide-details="auto" type="number" step="0.5" min="0.5" max="12"></v-text-field>
     <div class="input-date">
       <v-col cols="12" sm="6" md="4">
-        <v-menu return-value="2023-02-05" transition="scale-transition" offset-y="" min-width="auto">
+        <v-menu return-value="2023-02-24" transition="scale-transition" offset-y="" min-width="auto">
           <v-date-picker no-title="" scrollable="">
             <v-spacer></v-spacer>
             <v-btn text="" color="primary">
